@@ -222,7 +222,17 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         }
 
         // TODO (2) Launch the map when the map menu item is clicked
-
+        if (id == R.id.action_open_map){
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            String address = "175 Freeman st, MA 02446";
+            Uri.Builder builder = new Uri.Builder();
+            builder.scheme("geo")
+                    .path("0,0")
+                    .query(address);
+            Uri addressUri = builder.build();
+            intent.setData(addressUri);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 }
