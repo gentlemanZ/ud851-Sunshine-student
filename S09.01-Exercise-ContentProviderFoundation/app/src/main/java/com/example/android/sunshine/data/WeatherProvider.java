@@ -84,6 +84,7 @@ public class WeatherProvider extends ContentProvider {
     }
 
 //  TODO (8) Provide an implementation for the query method
+    //shold review to check out how to use db in query. also how to get selection and selection args.
     /**
      * Handles query requests from clients. We will use this method in Sunshine to query for all
      * of our weather data as well as to query for the weather on a particular day.
